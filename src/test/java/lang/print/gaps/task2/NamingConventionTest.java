@@ -7,7 +7,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
-import java.util.stream.Collectors;
+//import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -27,9 +27,8 @@ class NamingConventionTest {
                                 line.contains("variableSix") ||
                                 line.contains("variableSeven") ||
                                 line.contains("variableEight"))
-                .collect(Collectors.toList());
+                .toList();
 
-        assertEquals(9, result.size(), "You should follow the case that is used for variable name:" +
-                " if in the snippet you see snake case -> in the solution you must follow it.");
+        assertEquals(9, result.size(), "");
     }
 }
